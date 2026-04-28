@@ -17,12 +17,12 @@ const Footer = () => {
       ]
     },
     {
-      title: "Legal",
+      title: "Legals",
       links: [
         { label: "Cookie Policy", href: "https://tela.ng/cookies" },
         { label: "Privacy Policy", href: "https://tela.ng/privacy" },
         { label: "Terms & Conditions", href: "https://tela.ng/Terms&conditions" },
-        { label: "Merchant Policy", href: "https://tela.ng/merchant" },
+        { label: "Merchant Agreement", href: "https://tela.ng/merchant" },
         { label: "Information Security Policy", href: "https://tela.ng/isp" }
       ]
     },
@@ -34,49 +34,64 @@ const Footer = () => {
         { label: "TikTok", href: "https://www.tiktok.com/@mytelaapp" },
         { label: "Facebook", href: "https://facebook.com/gettelaapp" }
       ]
+    },
+    {
+      title: "Support",
+      links: [
+        { label: "Contact", href: "https://tela.ng/contact-us" }
+      ]
+    },
+    {
+      title: "Careers",
+      links: [
+        { label: "Join Tela", href: "https://tela.ng/careers" }
+      ]
     }
   ]
 
   return (
-    <footer className="bg-transparent border-t border-muted/10 py-20 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-12">
-        <div className="col-span-2">
-          <Link href="/" className="inline-block mb-6">
+    <footer className="bg-transparent border-t border-muted/10 pt-20 pb-12 px-6 md:px-12 font-bricolage">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
+        <div className="flex flex-wrap gap-x-16 gap-y-12">
+          {sections.map((section) => (
+            <div key={section.title} className="min-w-[120px]">
+              <h4 className="font-bold text-[14px] text-foreground mb-6">
+                {section.title}
+              </h4>
+              <ul className="space-y-4">
+                {section.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-muted/60 hover:text-foreground text-[14px] transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex items-start justify-end">
+          <Link href="/" className="inline-block">
             <Image
               src="/logo.png"
               alt="Tela Logo"
-              width={100}
-              height={30}
-              className="w-auto h-6 object-contain"
+              width={240}
+              height={80}
+              className="w-auto h-24 md:h-28 object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-90"
             />
           </Link>
-          <p className="text-muted text-sm max-w-xs mb-8">
-            The all-in-one platform for commerce in Africa. Build, manage, and grow your business with ease.
-          </p>
         </div>
-
-        {sections.map((section) => (
-          <div key={section.title}>
-            <h4 className="font-bold text-sm uppercase tracking-widest text-foreground mb-6">
-              {section.title}
-            </h4>
-            <ul className="space-y-4">
-              {section.links.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-muted hover:text-foreground text-sm transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
       </div>
-      <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-muted/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted/50 uppercase tracking-widest">
-        <p>© 2026 TELA. All rights reserved.</p>
+
+      <div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-muted/10">
+        <p className="text-center text-[13px] text-muted/60 leading-relaxed max-w-4xl mx-auto">
+          © Tela 2026 — All rights reserved. "TELA" a sub of Difi Financial Services LTD. 
+          TELA offers its financial services in partnership with licensed financial institutions in their respective jurisdictions.
+        </p>
       </div>
     </footer>
   )

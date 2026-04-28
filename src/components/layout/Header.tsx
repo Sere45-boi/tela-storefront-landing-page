@@ -35,7 +35,7 @@ const Header = () => {
     <>
       <header
         ref={headerRef}
-        className="fixed top-0 left-0 w-full z-[100] py-3 px-6 md:px-12 flex items-center justify-between glass border-b border-muted/10"
+        className="fixed top-0 left-0 w-full z-[100] py-3 px-6 md:px-12 flex items-center justify-between glass border-b border-muted/10 font-bricolage"
       >
         <div className="flex items-center gap-10">
           <Link href="/" className="flex items-center shrink-0">
