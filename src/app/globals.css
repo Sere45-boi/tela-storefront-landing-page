@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #1e7048;
+  --accent: #093C15;
+  --muted: #737373;
+  --color--wasabi-300: #d5ecbd;
+  --color--green-200: #b5ebc8;
+
+
+}
+
+body {
+  color: var(--foreground);
+  background: fixed linear-gradient(135deg, 
+    #ffffff 0%, 
+    #ffffff 40%, 
+    var(--color--wasabi-300) 85%, 
+    var(--color--green-200) 100%
+  );
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Noise Overlay */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.03;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Typography refinement */
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-bricolage {
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+/* Custom Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hide scrollbar for clean aesthetic */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* GSAP Reveal Styles */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
