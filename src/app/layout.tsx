@@ -4,6 +4,30 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Tela | Your Marketplace for Quality Products",
   description: "Browse top vendors, find great deals, and pay safely through TELA's protected payment system.",
+  metadataBase: new URL('https://tela.ng'),
+  openGraph: {
+    title: "Tela | Your Marketplace for Quality Products",
+    description: "The all-in-one platform for commerce in Africa. Build, manage, and grow your business with ease.",
+    url: 'https://tela.ng',
+    siteName: 'Tela',
+    images: [
+      {
+        url: '/logo.png', // Using the main logo as the social share image
+        width: 1200,
+        height: 630,
+        alt: 'Tela Africa - Commerce for Everyone',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Tela | Your Marketplace for Quality Products",
+    description: "The all-in-one platform for commerce in Africa. Build, manage, and grow your business with ease.",
+    images: ['/logo.png'],
+    creator: '@mytelaapp',
+  },
 };
 
 export default function RootLayout({
