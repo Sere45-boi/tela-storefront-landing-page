@@ -81,7 +81,7 @@ const Footer = () => {
               alt="Tela Logo"
               width={240}
               height={80}
-              className="w-auto h-24 md:h-28 object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-90"
+              className="w-auto h-24 md:h-28  transition-all duration-500 opacity-90"
             />
           </Link>
         </div>
@@ -89,7 +89,7 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-muted/10">
         <p className="text-center text-[13px] text-muted/60 leading-relaxed max-w-4xl mx-auto">
-          © Tela 2026 — All rights reserved. "TELA" a sub of Difi Financial Services LTD. 
+          © Tela 2026 — All rights reserved. "TELA" a sub of Difi Financial Services LTD.
           TELA offers its financial services in partnership with licensed financial institutions in their respective jurisdictions.
         </p>
       </div>

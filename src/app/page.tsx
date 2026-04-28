@@ -3,6 +3,8 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import LandingHero from '@/components/sections/LandingHero'
 import EmptyState from '@/components/sections/EmptyState'
+import BackToTop from '@/components/ui/back-to-top'
+import Intercom from '@/components/ui/intercom'
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
         <EmptyState />
       </div>
       <Footer />
+      <BackToTop />
+      <Intercom />
     </main>
   )
 }
