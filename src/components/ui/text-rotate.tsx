@@ -32,7 +32,6 @@ interface TextRotateProps {
   elementLevelClassName?: string
 }
 
-// Fixed AnimatePresenceProps issue by omitting mode if needed or importing it correctly
 type AnimatePresenceProps = React.ComponentProps<typeof AnimatePresence>
 
 export interface TextRotateRef {

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     siteName: 'Tela',
     images: [
       {
-        url: '/logo.png', // Using the main logo as the social share image
+        url: '/logo.png',
         width: 1200,
         height: 630,
         alt: 'Tela Africa - Commerce for Everyone',

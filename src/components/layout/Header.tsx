@@ -72,11 +72,8 @@ const Header = () => {
               className="bg-muted/10 border border-muted/20 rounded-full py-2 pl-10 pr-4 text-sm focus:outline-none focus:border-accent/50 w-64 transition-all"
             />
           </div>
-          <button className="hidden sm:block p-2 hover:bg-muted/10 rounded-full transition-colors">
-            <Globe className="w-5 h-5 text-muted" />
-          </button>
-          
-          <button 
+
+          <button
             className="md:hidden p-2 hover:bg-muted/10 rounded-full transition-colors text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
