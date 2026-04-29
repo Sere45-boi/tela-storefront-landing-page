@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 const Intercom = () => {
   useEffect(() => {
-    window.intercomSettings = {
+    (window as any).intercomSettings = {
       api_base: "https://api-iam.intercom.io",
       app_id: "dgbmvjoz",
     };
